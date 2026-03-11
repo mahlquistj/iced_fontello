@@ -10,12 +10,24 @@ pub fn edit<'a>() -> Text<'a> {
     icon("\u{270E}")
 }
 
+pub const fn edit_str() -> &'static str {
+    "\u{270E}"
+}
+
 pub fn save<'a>() -> Text<'a> {
     icon("\u{1F4BE}")
 }
 
+pub const fn save_str() -> &'static str {
+    "\u{1F4BE}"
+}
+
 pub fn trash<'a>() -> Text<'a> {
     icon("\u{E10A}")
+}
+
+pub const fn trash_str() -> &'static str {
+    "\u{E10A}"
 }
 
 fn icon(codepoint: &str) -> Text<'_> {

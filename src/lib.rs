@@ -293,6 +293,9 @@ pub fn build(path: impl AsRef<Path>) -> Result<(), Error> {
             "\
 pub fn {name}<'a>() -> Text<'a> {{
     icon(\"\\u{{{code:X}}}\")
+}}\n
+pub const fn {name}_str() -> &'static str {{
+    \"\\u{{{code:X}}}\"
 }}\n\n",
             code = glyph.code
         ));
